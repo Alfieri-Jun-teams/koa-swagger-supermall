@@ -1,5 +1,5 @@
-const { SwaggerAPI } = require('koa-joi-router-docs')
-const Router = require('koa-joi-router')
+import { SwaggerAPI } from 'koa-joi-router-docs'
+import Router from 'koa-joi-router'
 const router = Router()
 
 const login = require('./routes/login')
