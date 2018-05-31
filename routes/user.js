@@ -1,4 +1,4 @@
-import Router from 'koa-joi-router'
+const Router = require('koa-joi-router')
 const Joi = Router.Joi
 
 const router = Router()
@@ -42,7 +42,8 @@ router.get('/users', {
         body: Joi.object({
           code: Joi.number().description('返回标识'),
           message: Joi.string().description('接口描述'),
-          data: Joi.array().items(user).description('返回数据')
+          data: Joi.array().items(user).description('返回数据'),
+          pagination: Joi.object().description('分页')
         }).options({
           allowUnknown: true
         }).description('用户信息')

@@ -1,4 +1,4 @@
-import Router from 'koa-joi-router'
+const Router = require('koa-joi-router')
 const Joi = Router.Joi
 const router = Router()
 

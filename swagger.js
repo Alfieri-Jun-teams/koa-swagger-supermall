@@ -7,6 +7,8 @@ const user = require('./routes/user')
 const goods = require('./routes/goods')
 const cart = require('./routes/cart')
 const order = require('./routes/order')
+const addrress = require('./routes/address')
+const areaData = require('./routes/areaData')
 /**
    * Generate Swagger json from the router object
    */
@@ -16,6 +18,8 @@ generator.addJoiRouter(user)
 generator.addJoiRouter(goods)
 generator.addJoiRouter(cart)
 generator.addJoiRouter(order)
+generator.addJoiRouter(addrress)
+generator.addJoiRouter(areaData)
 
 const spec = generator.generateSpec({
   info: {
